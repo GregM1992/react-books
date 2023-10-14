@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import { viewAuthorDetails } from '../../api/mergedData';
+import { getAuthorDetails } from '../../api/mergedData';
 import BookCard from '../../components/BookCard';
 
 export default function ViewAuthor() {
@@ -13,7 +13,7 @@ export default function ViewAuthor() {
   const { firebaseKey } = router.query;
 
   const getAuthDetails = () => {
-    viewAuthorDetails(firebaseKey).then(setAuthorDetails);
+    getAuthorDetails(firebaseKey).then(setAuthorDetails);
   };
 
   useEffect(() => {
