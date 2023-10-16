@@ -24,9 +24,6 @@ function OrderCard({ orderObj, onUpdate }) {
           <Button variant="primary" className="m-2">VIEW</Button>
         </Link>
         {/* DYNAMIC LINK TO EDIT THE order DETAILS  */}
-        <Link href={`/order/edit/${orderObj.firebaseKey}`} passHref>
-          <Button variant="info">EDIT</Button>
-        </Link>
         <Button variant="danger" onClick={deleteAnOrder} className="m-2">
           DELETE
         </Button>
